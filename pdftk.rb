@@ -22,7 +22,7 @@ class Pdftk < Formula
       inreplace 'Makefile.OSX-10.6' do |s|
         s.gsub! '@HOMEBREW_PREFIX@', HOMEBREW_PREFIX
         s.gsub! '@PREFIX@', Formula.factory('gcc48').prefix
-        s.gsub! '@GCC_TOOL_VERSION@', Formula.factory('gcc48').version.sub(/(\d\.\d).*/,'-\1')
+        s.gsub! '@GCC_TOOL_VERSION@', "#{Formula.factory('gcc48').version}".sub(/(\d\.\d).*/,'-\1')
         s.gsub! '@GCC_VERSION@', Formula.factory('gcc48').version
         s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
       end
