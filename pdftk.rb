@@ -7,14 +7,10 @@ class Pdftk < Formula
 
   head 'https://github.com/docmunch/pdftk.git', :branch => 'master'
 
-  def gcc
-    'gcc48'
-  end
-
-  depends_on "Homebrew/versions/#{gcc}" => 'enable-all-languages' # or 'enable-java'
+  depends_on "Homebrew/versions/gcc48" => 'enable-all-languages' # or 'enable-java'
 
   def patches
-    'https://raw.github.com/docmunch/homebrew-pdftk/master/patch.diff'
+    'https://raw2.github.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
   end
 
   def install
@@ -24,11 +20,11 @@ class Pdftk < Formula
 
     cd 'pdftk' do
       inreplace 'Makefile.OSX-10.6' do |s|
-        s.gsub! '@HOMEBREW_PREFIX@', "#{HOMEBREW_PREFIX}"
-        s.gsub! '@PREFIX@', "#{Formula.factory(gcc).prefix}"
-        s.gsub! '@GCC_TOOL_VERSION@', "#{Formula.factory(gcc).version}".sub(/(\d\.\d).*/,'\1')
-        s.gsub! '@GCC_VERSION@', "#{Formula.factory(gcc).version}"
-        s.gsub! '@BUILD@', "#{Formula.factory(gcc).arch}-apple-darwin#{Formula.factory(gcc).osmajor}"
+        s.gsub! '@HOMEBREW_PREFIX@', HOMEBREW_PREFIX
+        s.gsub! '@PREFIX@', Formula.factory('gcc48').prefix
+        s.gsub! '@GCC_TOOL_VERSION@', Formula.factory('gcc48').version.sub(/(\d\.\d).*/,'-\1')
+        s.gsub! '@GCC_VERSION@', Formula.factory('gcc48').version
+        s.gsub! '@BUILD@', "#{Formula.factory('gcc48').arch}-apple-darwin#{Formula.factory('gcc48').osmajor}"
       end
 
       system 'make', '-f', 'Makefile.OSX-10.6'
