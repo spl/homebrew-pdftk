@@ -2,8 +2,7 @@ require 'formula'
 
 class Pdftk < Formula
   homepage 'https://github.com/docmunch/pdftk'
-  url 'https://github.com/docmunch/pdftk.git'
-  version '2.02'
+  url 'https://github.com/docmunch/pdftk.git', :tag => "v2.02"
 
   head 'https://github.com/docmunch/pdftk.git', :branch => 'master'
 
