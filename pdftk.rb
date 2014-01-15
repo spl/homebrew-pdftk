@@ -14,6 +14,9 @@ class Pdftk < Formula
   end
 
   def install
+    # Disable check on libstdc++ since we're using gcc and not clang.
+    cxxstdlib_check :skip
+
     doc.mkpath
     doc.install 'changelog.html', 'changelog.txt', 'pdftk.1.html', 'pdftk.1.txt'
     man1.install 'pdftk.1'
