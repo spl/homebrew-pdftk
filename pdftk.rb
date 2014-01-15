@@ -33,7 +33,7 @@ class Pdftk < Formula
       system 'make', '-f', 'Makefile.OSX-10.6'
     end
 
-    bin.install 'pdftk'
+    bin.install 'pdftk/pdftk'
   end
 
   test do
