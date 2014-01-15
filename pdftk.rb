@@ -17,7 +17,7 @@ class Pdftk < Formula
     cxxstdlib_check :skip
 
     doc.mkpath
-    doc.install 'changelog.html', 'changelog.txt', 'pdftk.1.html', 'pdftk.1.txt'
+    doc.install 'changelog.html', 'changelog.txt', 'pdftk.1.html', 'pdftk.1.txt', 'license_gpl_pdftk'
     man1.install 'pdftk.1'
 
     cd 'pdftk' do
