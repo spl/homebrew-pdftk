@@ -6,7 +6,7 @@ class Pdftk < Formula
 
   head 'https://github.com/docmunch/pdftk.git', :branch => 'master'
 
-  depends_on "Homebrew/versions/gcc48" => 'enable-all-languages' # or 'enable-java'
+  depends_on "Homebrew/versions/gcc48" => [:build, 'enable-all-languages'] # or 'enable-java'
 
   def patches
     'https://raw2.github.com/docmunch/homebrew-pdftk/fbe14dbb13d65a6847fc70ad521719ea9ad1353f/patch.diff'
