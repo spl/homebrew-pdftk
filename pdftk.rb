@@ -6,8 +6,11 @@ class Pdftk < Formula
 
   head 'https://github.com/docmunch/pdftk.git', :branch => 'master'
 
+  option "with-java", "Build gcc using --with-java instead of --with-all-languages"
+
   depends_on 'ecj'
-  depends_on 'gcc' => ['with-all-languages'] # or 'with-java'
+  depends_on 'gcc' => ['with-java'] if build.with?("java")
+  depends_on 'gcc' => ['with-all-languages'] if !build.with?("java")
 
   def patches
     'https://raw.githubusercontent.com/docmunch/homebrew-pdftk/master/patch.diff'
