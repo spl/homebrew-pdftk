@@ -25,7 +25,7 @@ index 8f7e52d..390c974 100644
 -TOOLPATH=/sw/lib/gcc4.5/bin/
 -export VERSUFF=-fsf-4.5
 +TOOLPATH=@HOMEBREW_PREFIX@/bin/
-+export VERSUFF=@GCC_TOOL_VERSION@
++export VERSUFF=-@GCC_VERSION_SUFFIX@
  export CXX= $(TOOLPATH)g++$(VERSUFF)
  export GCJ= $(TOOLPATH)gcj$(VERSUFF)
  export GCJH= $(TOOLPATH)gcjh$(VERSUFF)
@@ -46,6 +46,6 @@ index 8f7e52d..390c974 100644
  export GCJFLAGS= -Wall -fsource=1.3 -O2
  export GCJHFLAGS= -force
 -export LDLIBS= /sw/lib/gcc4.5/lib/libgcj.dylib /sw/lib/gcc4.5/lib/libstdc++.dylib /sw/lib/gcc4.5/lib/libgcc_s.1.dylib -liconv -lz
-+export LDLIBS= @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libgcj.dylib @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libstdc++.dylib @PREFIX@/lib/gcc/@BUILD@/@GCC_VERSION@/libgcc_s.1.dylib -liconv -lz
++export LDLIBS= @PREFIX@/lib/gcc/@GCC_VERSION_SUFFIX@/libgcj.dylib @PREFIX@/lib/gcc/@GCC_VERSION_SUFFIX@/libstdc++.dylib @PREFIX@/lib/gcc/@GCC_VERSION_SUFFIX@/libgcc_s.1.dylib -liconv -lz
  
  include Makefile.Base
