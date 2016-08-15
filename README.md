@@ -42,11 +42,11 @@ for more information.
 Then, use [`brew
 tap`](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/brew-tap.md#brew-tap)
 to track the
-[`docmunch/homebrew-pdftk`](https://github.com/docmunch/homebrew-pdftk)
+[`spl/homebrew-pdftk`](https://github.com/spl/homebrew-pdftk)
 repository:
 
 ```
-$ brew tap docmunch/pdftk
+$ brew tap spl/pdftk
 ```
 
 Finally, install the `pdftk` formula:
