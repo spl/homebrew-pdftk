@@ -5,6 +5,14 @@ Server](https://www.pdflabs.com/tools/pdftk-server/), the
 [GPL-licensed](https://www.pdflabs.com/docs/pdftk-license/) version of
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/), a PDF toolkit.
 
+[![Maintenance](https://img.shields.io/maintenance/no/2013.svg)]()
+
+**NOTICE!** _This project is no longer maintained. The author of PDFtk has not released
+a new source distribution [since July 24, 2013](https://www.pdflabs.com/docs/pdftk-version-history/).
+The latest source release (2.02) does not work for Mac OS X 10.11 (El Capitan) and above.
+See [this Stack Overflow post](http://stackoverflow.com/questions/32505951/pdftk-server-on-os-x-10-11)
+for a binary distribution and alternatives to PDFtk._
+
 ## Features
 
 From the [PDFtk Server website](https://www.pdflabs.com/tools/pdftk-server/),
