@@ -5,7 +5,7 @@ Server](https://www.pdflabs.com/tools/pdftk-server/), the
 [GPL-licensed](https://www.pdflabs.com/docs/pdftk-license/) version of
 [PDFtk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/), a PDF toolkit.
 
-[![Maintenance](https://img.shields.io/maintenance/no/2013.svg)]()
+[![Maintenance](https://img.shields.io/maintenance/no/2013.svg)](http://stackoverflow.com/questions/32505951/pdftk-server-on-os-x-10-11)
 
 **NOTICE!** _This project is no longer maintained. The author of PDFtk has not released
 a new source distribution [since July 24, 2013](https://www.pdflabs.com/docs/pdftk-version-history/).
